@@ -23,7 +23,8 @@
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis hic soluta ducimus iusto aliquam voluptatibus sit vel accusamus ratione esse earum, quasi neque est id error dolorum suscipit distinctio eligendi dolores?</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo fuga nihil numquam, molestiae earum, incidunt, et fugiat unde eum alias eos pariatur quidem animi accusantium odio perferendis quia vel iure.</p>
     <p class="success">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt delectus autem incidunt saepe iste placeat a success dolorum eaque architecto, ex ab sunt porro possimus maiores ad amet! Possimus, odit quisquam!</p>
-    <?php if($_POST["pwd"]!= NULL && $_POST["pwd"]=="okay"){
+    <?php $hash = "\$6\$AgsYAcnMaerQaGsp\$s9w/8eiKr18ghCyQPWdwPeKVrL.gTDvaupl0nnCH0hO7HsCl1hgM1MPCunv4XeotarWMVcz38KDVR4jwqlSuP/";
+	if($_POST["pwd"]!= NULL && password_verify($_POST["pwd"], $hash)){
         echo "<p> c'est un début</p>";
     } ?>
     <script src="js/home.js">
